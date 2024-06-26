@@ -14,43 +14,34 @@ const signupConfirmPwd = document.querySelector('#signup-confirm-pwd');
 
 let formStatus = 0;
 
+function validateUserInput(username, email, pwd, confirmPwd) {
+    if(username === '' || email === '' || pwd === '' || confirmPwd === ''){
+        return -1; // error, invalid input
+    }
+
+    if(pwd !== confirmPwd){
+        return -1; // error, invalid input
+    }
+
+    return 1; // No Error
+}
+
 signUpForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // do not send it to the server
+    e.preventDefault(); // do not send it to the server 
 
-    // validate data
-    // function validate(){}
+    // validating user input
+    formStatus = validateUserInput(signupName.value, signupEmail.value, signupPwd.value, signupConfirmPwd.value);
 
-    // storing the data after validation
-    // function storeDate(){}
-
-    
-    if ((signupPwd.value !== signupConfirmPwd.value) && (signupConfirmPwd.value !== '') && (signupPwd.value !== '')){
-        alert('enter-valid pwd');
+    if(formStatus === 1){
+        for (const label of labels) {
+                userInput[`${label}`] = document.querySelector(`#${label}`).value;
+                document.querySelector(`#${label}`).value = ''; // resetting input values
+        }
+        console.log(userInput);
+        container.innerHTML = '<h1 style="text-align:center" >Form submitted successfully</h1>';
+    } else {
+        alert('Please enter valid input');
     }
-
-
-    formStatus = 1;
-
-    for (const label of labels) {
-        console.log(label);
-        if (document.querySelector(`#${label}`).value === '') {
-            alert(`${label} is invalid. please enter correct details`);
-            formStatus = -1; // invalid input
-            break; // coming out of loop
-            
-        }
-        else {
-            userInput[`${label}`] = document.querySelector(`#${label}`).value;
-            document.querySelector(`#${label}`).value = ''; // resetting input values
-        }
-    }
-
-
-    console.log(userInput);
-        if (formStatus === 1) {
-            container.innerHTML = '<h1 style="text-align:center" >Form submitted successfully</h1>';
-
-        }
 
 })
 
