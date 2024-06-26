@@ -1,0 +1,16 @@
+.dark-theme {
+    .form-container form input {
+        background-color: rgb(187, 189, 190);
+        color: #212121;
+    }
+
+    ::placeholder {
+        color: #515151;
+        // color: linear-gradient(red, yellow);
+    }
+
+    .form-container form input:active {
+        border-color: aqua;
+    }
+}
+

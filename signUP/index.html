@@ -1,15 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Sign Page</title>
-    
+
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="themeStyle.css">
 </head>
+
 <body>
     <div id="root-container">
-        <div class="container">
+        <div class="theme-switch" style="float: inline-end; padding-right: 2rem;">
+            <button type="button" style="width: 2rem; height: 2rem; border-radius: 6px;">
+                <i class="fa fa-sun-o" style="font-size: 1.5rem;"></i>
+            </button>
+        </div>
+        <div class="container dark-theme">
+            <div class="form-container" id="signup">
+                <h1>SignUp</h1>
+                <form action="./index.html" id="signup-form">
+                    <div class="input-container">
+                        <label for="signup-name">Username</label>
+                        <input type="text" name="username" id="signup-name" placeholder="username">
+
+                    </div>
+                    <div class="input-container">
+                        <label for="signup-email">Email</label>
+                        <input type="email" name="email" id="signup-email" placeholder="example@email.com">
+
+                    </div>
+                    <div class="input-container">
+                        <label for="signup-pwd">Password</label>
+                        <input type="password" name="password" id="signup-pwd" placeholder="password">
+
+                    </div>
+                    <div class="input-container">
+                        <label for="signup-confirm-pwd">Confirm Password</label>
+                        <input type="confirm" name="confirm" id="signup-confirm-pwd" placeholder="confirm password">
+
+                    </div>
+                    <button id="submit-btn" type="submit">SignUp</button>
+                </form>
+            </div>
+        </div>
+        <!-- <div class="container dark-theme" >
             <div class="form-container" id="signup">
                 <h1>SignUp</h1>
                 <form action="./index.html" id="signup-form">
@@ -20,8 +57,9 @@
                     <button id="submit-btn" type="submit" >SignUp</button>
                 </form>
             </div>
-        </div>
+        </div> -->
     </div>
 </body>
 <script src="./script.js"></script>
+
 </html>

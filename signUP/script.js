@@ -53,3 +53,33 @@ signUpForm.addEventListener('submit', (e) => {
         }
 
 })
+
+
+// theme switcher
+const themeBtn = document.querySelector('.theme-switch button');
+let darkTheme = true; // default theme -> dark 
+const themeSwitch = function(){
+    darkTheme = !darkTheme;
+    function changeBackgroundColor(){
+        if(darkTheme){
+            document.body.style.backgroundColor = "#212121";
+            document.querySelector('.container').classList.remove('light-theme');
+            document.querySelector('.theme-switch button i').classList.remove('fa-moon-o')
+            document.querySelector('.theme-switch button i').classList.add('fa-sun-o')
+        }
+        else{
+            document.body.style.backgroundColor = "aliceblue";
+            document.querySelector('.container').classList.add('light-theme');
+            document.querySelector('.theme-switch button i').classList.remove('fa-sun-o')
+            document.querySelector('.theme-switch button i').classList.add('fa-moon-o')
+        }
+    }
+
+    changeBackgroundColor();
+} 
+
+themeBtn.addEventListener('click', ()=>{
+    themeSwitch();
+})
+
+
