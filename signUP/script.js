@@ -62,14 +62,16 @@ const themeSwitch = function(){
     darkTheme = !darkTheme;
     function changeBackgroundColor(){
         if(darkTheme){
-            document.body.style.backgroundColor = "#212121";
-            document.querySelector('.container').classList.remove('light-theme');
+            // document.body.style.backgroundColor = "#212121";
+            document.querySelector('#root-container').classList.remove('light-theme');
+            document.querySelector('#root-container').classList.add('dark-theme');
             document.querySelector('.theme-switch button i').classList.remove('fa-moon-o')
             document.querySelector('.theme-switch button i').classList.add('fa-sun-o')
         }
         else{
-            document.body.style.backgroundColor = "aliceblue";
-            document.querySelector('.container').classList.add('light-theme');
+            // document.body.style.backgroundColor = "aliceblue";
+            document.querySelector('#root-container').classList.remove('dark-theme')
+            document.querySelector('#root-container').classList.add('light-theme');
             document.querySelector('.theme-switch button i').classList.remove('fa-sun-o')
             document.querySelector('.theme-switch button i').classList.add('fa-moon-o')
         }
@@ -81,5 +83,3 @@ const themeSwitch = function(){
 themeBtn.addEventListener('click', ()=>{
     themeSwitch();
 })
-
-

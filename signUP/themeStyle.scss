@@ -1,16 +1,35 @@
 .dark-theme {
+    background-color: #111;
+
+    .container {
+        background-color: #212121;
+    }
+
     .form-container form input {
-        background-color: rgb(187, 189, 190);
-        color: #212121;
+        background-color: #111;
+        color: aliceblue;
     }
 
     ::placeholder {
-        color: #515151;
-        // color: linear-gradient(red, yellow);
+        color: #c5c3c3;
     }
 
-    .form-container form input:active {
-        border-color: aqua;
-    }
 }
 
+.light-theme {
+    background-color: aliceblue;
+
+    .container {
+        background-color: #212121;
+        // h1 {color: aliceblue;}
+    }
+
+    .form-container input {
+        background-color: aliceblue;
+    }
+
+    ::placeholder {
+        color: rgb(111, 110, 110);
+        // opacity: ;
+    }
+}

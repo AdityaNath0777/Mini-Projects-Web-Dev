@@ -19,11 +19,6 @@ body {
     background-color: #313131;
     color: aliceblue
 }
-.dark-theme {
-    color: #212121;
-    background: #212121;
-    background-color: aliceblue;
-}
 
 .container {
     display: block;
@@ -46,6 +41,7 @@ body {
     align-items: center;
     justify-content: center;
     row-gap: 1rem;
+    font-family: cursive;
 }
 
 .form-container form input {
@@ -55,18 +51,18 @@ body {
     background-color: #212121;
     border-radius: 0.7rem;
     color: aliceblue;
-    font-size: large;
-    font-family: cursive;
+    font-size: 1.4rem;
 }
 
 ::placeholder {
     color: rgb(195, 197, 198);
     opacity: 0.9;
     font-size: 0.9rem;
+    font-family: cursive;
 }
 
 .form-container #submit-btn {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     width: 12rem;
     font-size: 1.4rem;
     border: 2px solid #fff;
@@ -93,14 +89,13 @@ body {
     transform: translateY(0.1rem);
 }
 
-.light-theme {
-
-    background-color: #212121;
-    color: aliceblue;
-}
-
 .theme-switch {
     position: absolute;
     top: 2rem;
     right: 2rem;
+    cursor: pointer;
+}
+
+.theme-switch button {
+    cursor: pointer;
 }
