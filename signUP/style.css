@@ -1,101 +1,128 @@
 /* CSS Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-
 #root-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 body {
-    background-color: #313131;
-    color: aliceblue
+  background-color: #313131;
+  color: aliceblue;
 }
 
 .container {
-    display: block;
-    width: 36rem;
-    height: 36rem;
-    margin: auto;
-    border: 3px solid #dbdada;
-    border-radius: 1rem;
-    padding: 3rem 1.5rem;
+  display: block;
+  width: 36rem;
+  height: 36rem;
+  margin: auto;
+  border: 3px solid #dbdada;
+  border-radius: 1rem;
+  padding: 3rem 1.5rem;
 }
 
 .form-container h1 {
-    text-align: center;
-    margin-bottom: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.form-container>form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    row-gap: 1rem;
-    font-family: cursive;
+.form-container > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  font-family: cursive;
 }
 
 .form-container form input {
-    width: 100%;
-    border: 2px solid rgb(178, 102, 178);
-    padding: 0.5rem;
-    background-color: #212121;
-    border-radius: 0.7rem;
-    color: aliceblue;
-    font-size: 1.4rem;
+  width: 100%;
+  border: 2px solid rgb(178, 102, 178);
+  padding: 0.5rem;
+  background-color: #212121;
+  border-radius: 0.7rem;
+  color: aliceblue;
+  font-size: 1.4rem;
 }
 
 ::placeholder {
-    color: rgb(195, 197, 198);
-    opacity: 0.9;
-    font-size: 0.9rem;
-    font-family: cursive;
+  color: rgb(195, 197, 198);
+  opacity: 0.9;
+  font-size: 0.9rem;
+  font-family: cursive;
 }
 
 .form-container #submit-btn {
-    margin-top: 1.5rem;
-    width: 12rem;
-    font-size: 1.4rem;
-    border: 2px solid #fff;
-    background: linear-gradient(to top right, rgb(240, 106, 106) 20%, purple);;
-    color: aliceblue;
-    border-radius: 10px;
-    padding: 0.5rem 0.25rem;
-    cursor: pointer;
+  margin-top: 1.5rem;
+  width: 12rem;
+  font-size: 1.4rem;
+  border: 2px solid #fff;
+  background: linear-gradient(to top right, rgb(240, 106, 106) 20%, purple);
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 0.5rem 0.25rem;
+  cursor: pointer;
 }
 
-.input-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 0.3rem;
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.3rem;
 }
 
-.form-container #submit-btn:hover{
-    background-color: #717171;
+.form-container #submit-btn:hover {
+  background-color: #717171;
 }
 
-.form-container #submit-btn:active{
-    background-color: #515151;
-    transform: translateY(0.1rem);
+.form-container #submit-btn:active {
+  background-color: #515151;
+  transform: translateY(0.1rem);
 }
 
 .theme-switch {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-    cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  float: inline-end;
+  margin-right: 2rem;
 }
 
 .theme-switch button {
-    cursor: pointer;
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+}
+
+@media (max-width: 990px) {
+  .theme-switch {
+    right: 10px;
+    margin-right: 1rem;
+  }
+
+  .container {
+    width: 70%;
+    height: auto;
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  .theme-switch {
+    top: 0.7rem;
+  }
 }
