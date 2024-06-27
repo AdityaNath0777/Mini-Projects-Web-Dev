@@ -1,0 +1,56 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #212121;
+  color: aliceblue;
+}
+
+/* .container {
+  display: block;
+} */
+
+.cards-container {
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 5rem;
+}
+
+.card {
+    flex: 0.5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    position: relative;
+    transition: flex 0.5s ease;
+    margin: 0 1.1rem;
+    border-radius: 16px;
+}
+
+.card h3 {
+    position: absolute;
+    bottom: 30px;
+    left: 1rem;
+    font-size: 2.1rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    opacity: 0;
+}
+
+.active {
+    flex: 5;
+    transition: flex 0.5s ease;
+}
+
+.active h3 {
+    opacity: 1;
+}
