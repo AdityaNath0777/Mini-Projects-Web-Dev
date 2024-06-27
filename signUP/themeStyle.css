@@ -1,0 +1,32 @@
+.dark-theme {
+  background-color: #111;
+}
+.dark-theme .container {
+  background-color: #212121;
+}
+.dark-theme .form-container form input {
+  background-color: #111;
+  color: aliceblue;
+}
+.dark-theme ::-moz-placeholder {
+  color: #c5c3c3;
+}
+.dark-theme ::placeholder {
+  color: #c5c3c3;
+}
+
+.light-theme {
+  background-color: aliceblue;
+}
+.light-theme .container {
+  background-color: #212121;
+}
+.light-theme .form-container input {
+  background-color: aliceblue;
+}
+.light-theme ::-moz-placeholder {
+  color: rgb(111, 110, 110);
+}
+.light-theme ::placeholder {
+  color: rgb(111, 110, 110);
+}/*# sourceMappingURL=themeStyle.css.map */
