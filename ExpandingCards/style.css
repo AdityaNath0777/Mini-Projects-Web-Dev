@@ -54,3 +54,16 @@
 .active h3 {
     opacity: 1;
 }
+
+
+@media (max-width: 650px) {
+  .cards-container {
+    flex-direction: column;
+    height: 80vh;
+  }
+  
+  .card {
+    width: 80vw;
+    margin-bottom: 0.8rem;
+  }
+}
